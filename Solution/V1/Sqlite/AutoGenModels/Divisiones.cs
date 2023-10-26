@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore;
 namespace sqlite.AutoGens;
 
 [Table("divisiones")]
-public partial class Divisione
+public class Divisiones
 {
     [Key]
     [Column("id")]
-    public long Id { get; set; }
+    public int Id { get; set; }
 
     [Column("descripcion")]
     public string? Descripcion { get; set; }
@@ -26,7 +26,7 @@ public partial class Divisione
     public string? FchEliminacion { get; set; }
 
     [InverseProperty("IdDivisionNavigation")]
-    public virtual ICollection<Materia> Materia { get; set; } = new List<Materia>();
+    public virtual ICollection<Materias> Materia { get; set; } = new List<Materias>();
 
     [InverseProperty("IdDivisionNavigation")]
     public virtual ICollection<Salone> Salones { get; set; } = new List<Salone>();

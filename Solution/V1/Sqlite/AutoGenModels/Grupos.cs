@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace sqlite.AutoGens;
 
 [Table("grupos")]
-public partial class Grupo
+public class Grupos
 {
     [Key]
     [Column("id")]
