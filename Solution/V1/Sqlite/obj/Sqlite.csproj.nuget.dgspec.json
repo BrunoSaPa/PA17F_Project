@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\Sqlite.csproj": {}
+    "C:\\Users\\aguil\\Desktop\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj": {}
   },
   "projects": {
-    "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\Sqlite.csproj": {
+    "C:\\Users\\aguil\\Desktop\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\Sqlite.csproj",
+        "projectUniqueName": "C:\\Users\\aguil\\Desktop\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj",
         "projectName": "Sqlite",
-        "projectPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\Sqlite.csproj",
-        "packagesPath": "C:\\Users\\rsv15\\.nuget\\packages\\",
-        "outputPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\obj\\",
+        "projectPath": "C:\\Users\\aguil\\Desktop\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj",
+        "packagesPath": "C:\\Users\\aguil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aguil\\Desktop\\PA17F_Project\\Solution\\V1\\Sqlite\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\rsv15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aguil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,6 +44,18 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

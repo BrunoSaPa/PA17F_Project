@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
+namespace sqlite.AutoGens;
+
+[Table("tps_prm_prestamos")]
+public partial class TpsPrmPrestamo
+{
+    [Key]
+    [Column("id")]
+    public long Id { get; set; }
+
+    [Column("descripcion")]
+    public string? Descripcion { get; set; }
+
+    [InverseProperty("IdTpoPrmPrestamoNavigation")]
+    public virtual ICollection<PrmPrestamo> PrmPrestamos { get; set; } = new List<PrmPrestamo>();
+}
