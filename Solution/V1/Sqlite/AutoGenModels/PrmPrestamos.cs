@@ -7,17 +7,17 @@ using Microsoft.EntityFrameworkCore;
 namespace sqlite.AutoGens;
 
 [Table("prm_prestamos")]
-public partial class PrmPrestamo
+public class PrmPrestamos
 {
     [Key]
     [Column("id")]
-    public long Id { get; set; }
+    public int Id { get; set; }
 
     [Column("id_tpo_prm_prestamo")]
-    public long? IdTpoPrmPrestamo { get; set; }
+    public int? IdTpoPrmPrestamo { get; set; }
 
     [Column("id_usuario")]
-    public long? IdUsuario { get; set; }
+    public int? IdUsuario { get; set; }
 
     [Column("fch_inicio", TypeName = "DATETIME")]
     public byte[]? FchInicio { get; set; }
@@ -36,7 +36,7 @@ public partial class PrmPrestamo
 
     [ForeignKey("IdTpoPrmPrestamo")]
     [InverseProperty("PrmPrestamos")]
-    public virtual TpsPrmPrestamo? IdTpoPrmPrestamoNavigation { get; set; }
+    public virtual TpsPrmPrestamos? IdTpoPrmPrestamoNavigation { get; set; }
 
     [ForeignKey("IdUsuario")]
     [InverseProperty("PrmPrestamos")]

@@ -6,16 +6,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace sqlite.AutoGens;
 
-[Table("tps_prm_prestamos")]
-public partial class TpsPrmPrestamo
+[Table("tps_usuarios")]
+public class TpsUsuarios
 {
     [Key]
     [Column("id")]
-    public long Id { get; set; }
+    public int Id { get; set; }
 
     [Column("descripcion")]
     public string? Descripcion { get; set; }
-
-    [InverseProperty("IdTpoPrmPrestamoNavigation")]
-    public virtual ICollection<PrmPrestamo> PrmPrestamos { get; set; } = new List<PrmPrestamo>();
 }

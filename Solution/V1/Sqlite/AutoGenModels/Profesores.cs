@@ -7,17 +7,17 @@ using Microsoft.EntityFrameworkCore;
 namespace sqlite.AutoGens;
 
 [Table("profesores")]
-public partial class Profesore
+public class Profesores
 {
     [Key]
     [Column("id")]
-    public long Id { get; set; }
+    public int Id { get; set; }
 
     [Column("id_usuario")]
-    public long? IdUsuario { get; set; }
+    public int? IdUsuario { get; set; }
 
     [Column("nomina")]
-    public long? Nomina { get; set; }
+    public int? Nomina { get; set; }
 
     [Column("fch_creacion", TypeName = "DATETIME")]
     public byte[]? FchCreacion { get; set; }

@@ -7,17 +7,17 @@ using Microsoft.EntityFrameworkCore;
 namespace sqlite.AutoGens;
 
 [Table("usuarios")]
-public partial class Usuario
+public class Usuario
 {
     [Key]
     [Column("id")]
-    public long Id { get; set; }
+    public int Id { get; set; }
 
     [Column("id_tpo_usuario")]
-    public long IdTpoUsuario { get; set; }
+    public int IdTpoUsuario { get; set; }
 
     [Column("id_est_usuario")]
-    public long IdEstUsuario { get; set; }
+    public int IdEstUsuario { get; set; }
 
     [Column("contrasena")]
     public byte[]? Contrasena { get; set; }
@@ -50,8 +50,8 @@ public partial class Usuario
     public virtual ICollection<Estudiante> Estudiantes { get; set; } = new List<Estudiante>();
 
     [InverseProperty("IdUsuarioNavigation")]
-    public virtual ICollection<PrmPrestamo> PrmPrestamos { get; set; } = new List<PrmPrestamo>();
+    public virtual ICollection<PrmPrestamos> PrmPrestamos { get; set; } = new List<PrmPrestamos>();
 
     [InverseProperty("IdUsuarioNavigation")]
-    public virtual ICollection<Profesore> Profesores { get; set; } = new List<Profesore>();
+    public virtual ICollection<Profesores> Profesores { get; set; } = new List<Profesores>();
 }

@@ -7,17 +7,17 @@ using Microsoft.EntityFrameworkCore;
 namespace sqlite.AutoGens;
 
 [Table("salones")]
-public partial class Salone
+public class Salones
 {
     [Key]
     [Column("id")]
-    public long Id { get; set; }
+    public int Id { get; set; }
 
     [Column("id_division")]
-    public long? IdDivision { get; set; }
+    public int? IdDivision { get; set; }
 
     [Column("nmr_salon")]
-    public long? NmrSalon { get; set; }
+    public int? NmrSalon { get; set; }
 
     [ForeignKey("IdDivision")]
     [InverseProperty("Salones")]

@@ -7,17 +7,17 @@ using Microsoft.EntityFrameworkCore;
 namespace sqlite.AutoGens;
 
 [Table("rlc_prs_equipo")]
-public partial class RlcPrsEquipo
+public class RlcPrsEquipo
 {
     [Key]
     [Column("id")]
-    public long Id { get; set; }
+    public int Id { get; set; }
 
     [Column("id_prm_prestamo")]
-    public long? IdPrmPrestamo { get; set; }
+    public int? IdPrmPrestamo { get; set; }
 
     [Column("id_equipo")]
-    public long? IdEquipo { get; set; }
+    public int? IdEquipo { get; set; }
 
     [ForeignKey("IdEquipo")]
     [InverseProperty("RlcPrsEquipos")]
@@ -25,5 +25,5 @@ public partial class RlcPrsEquipo
 
     [ForeignKey("IdPrmPrestamo")]
     [InverseProperty("RlcPrsEquipos")]
-    public virtual PrmPrestamo? IdPrmPrestamoNavigation { get; set; }
+    public virtual PrmPrestamos? IdPrmPrestamoNavigation { get; set; }
 }

@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rsv15\\.nuget\\packages\\": {}
+    "C:\\Users\\Jorge\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Entidades\\Entidades.csproj",
-      "packagesPath": "C:\\Users\\rsv15\\.nuget\\packages\\",
-      "outputPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Entidades\\obj\\",
+      "projectPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj",
+      "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rsv15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

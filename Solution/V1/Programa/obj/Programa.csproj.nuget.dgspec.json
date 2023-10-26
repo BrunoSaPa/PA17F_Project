@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Programa\\Programa.csproj": {}
+    "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Programa\\Programa.csproj": {}
   },
   "projects": {
-    "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\rsv15\\.nuget\\packages\\",
-        "outputPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rsv15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,21 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Programa\\Programa.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Programa\\Programa.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Programa\\Programa.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Programa\\Programa.csproj",
         "projectName": "Programa",
-        "projectPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Programa\\Programa.csproj",
-        "packagesPath": "C:\\Users\\rsv15\\.nuget\\packages\\",
-        "outputPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Programa\\obj\\",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Programa\\Programa.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Programa\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rsv15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,11 +83,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Entidades\\Entidades.csproj": {
-                "projectPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Entidades\\Entidades.csproj"
+              "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj"
               },
-              "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\Sqlite.csproj": {
-                "projectPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\Sqlite.csproj"
+              "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj": {
+                "projectPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj"
               }
             }
           }
@@ -117,21 +117,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\Sqlite.csproj": {
+    "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\Sqlite.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj",
         "projectName": "Sqlite",
-        "projectPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\Sqlite.csproj",
-        "packagesPath": "C:\\Users\\rsv15\\.nuget\\packages\\",
-        "outputPath": "D:\\Programas\\Avanzado\\Practicas\\P3\\Proyecto\\V1\\Sqlite\\obj\\",
+        "projectPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Sqlite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rsv15\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -156,6 +156,18 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -172,7 +184,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

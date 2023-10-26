@@ -35,21 +35,21 @@ public partial class sqlite : DbContext
 
     public virtual DbSet<Mantenimiento> Mantenimientos { get; set; }
 
-    public virtual DbSet<Materia> Materias { get; set; }
+    public virtual DbSet<Materias> Materias { get; set; }
 
-    public virtual DbSet<PrmPrestamo> PrmPrestamos { get; set; }
+    public virtual DbSet<PrmPrestamos> PrmPrestamos { get; set; }
 
-    public virtual DbSet<Profesore> Profesores { get; set; }
+    public virtual DbSet<Profesores> Profesores { get; set; }
 
     public virtual DbSet<RlcPrsEquipo> RlcPrsEquipos { get; set; }
 
-    public virtual DbSet<Salone> Salones { get; set; }
+    public virtual DbSet<Salones> Salones { get; set; }
 
-    public virtual DbSet<TpsMantenimiento> TpsMantenimientos { get; set; }
+    public virtual DbSet<TpsMantenimiento> TpsMantenimiento { get; set; }
 
-    public virtual DbSet<TpsPrmPrestamo> TpsPrmPrestamos { get; set; }
+    public virtual DbSet<TpsPrmPrestamos> TpsPrmPrestamos { get; set; }
 
-    public virtual DbSet<TpsUsuario> TpsUsuarios { get; set; }
+    public virtual DbSet<TpsUsuarios> TpsUsuarios { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
@@ -110,20 +110,20 @@ public partial class sqlite : DbContext
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
         });
 
-        modelBuilder.Entity<Materia>(entity =>
+        modelBuilder.Entity<Materias>(entity =>
         {
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
             entity.Property(e => e.FchEliminacion).HasDefaultValueSql("'0000-00-00 00:00:00'");
             entity.Property(e => e.FchModificacion).HasDefaultValueSql("'0000-00-00 00:00:00'");
         });
 
-        modelBuilder.Entity<PrmPrestamo>(entity =>
+        modelBuilder.Entity<PrmPrestamos>(entity =>
         {
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
             entity.Property(e => e.FchInicio).HasDefaultValueSql("datetime('now')");
         });
 
-        modelBuilder.Entity<Profesore>(entity =>
+        modelBuilder.Entity<Profesores>(entity =>
         {
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
@@ -134,7 +134,7 @@ public partial class sqlite : DbContext
             entity.Property(e => e.Id).ValueGeneratedNever();
         });
 
-        modelBuilder.Entity<Salone>(entity =>
+        modelBuilder.Entity<Salones>(entity =>
         {
             entity.Property(e => e.Id).ValueGeneratedNever();
         });

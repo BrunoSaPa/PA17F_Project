@@ -7,14 +7,14 @@ using Microsoft.EntityFrameworkCore;
 namespace sqlite.AutoGens;
 
 [Table("materias")]
-public partial class Materia
+public class Materias
 {
     [Key]
     [Column("id")]
-    public long Id { get; set; }
+    public int Id { get; set; }
 
     [Column("id_division")]
-    public long? IdDivision { get; set; }
+    public int? IdDivision { get; set; }
 
     [Column("descripcion")]
     public string? Descripcion { get; set; }
