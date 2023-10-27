@@ -301,6 +301,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Spectre.Console/0.47.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5"
+        },
+        "compile": {
+          "lib/net7.0/Spectre.Console.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Spectre.Console.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
         "type": "package",
         "dependencies": {
@@ -444,7 +460,7 @@
           "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
       },
-      "System.Memory/4.5.3": {
+      "System.Memory/4.5.5": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -942,6 +958,24 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Spectre.Console/0.47.0": {
+      "sha512": "wz8mszcZr0cSOo8GyoG9e2DFW0SkMT8/n78Q/lIXX7EbCtHNXOoOKWpJ9Str+rCYtmQOGGyDutZzubrUHK/XkA==",
+      "type": "package",
+      "path": "spectre.console/0.47.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Spectre.Console.dll",
+        "lib/net6.0/Spectre.Console.xml",
+        "lib/net7.0/Spectre.Console.dll",
+        "lib/net7.0/Spectre.Console.xml",
+        "lib/netstandard2.0/Spectre.Console.dll",
+        "lib/netstandard2.0/Spectre.Console.xml",
+        "small-logo.png",
+        "spectre.console.0.47.0.nupkg.sha512",
+        "spectre.console.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
       "sha512": "EWI1olKDjFEBMJu0+3wuxwziIAdWDVMYLhuZ3Qs84rrz+DHwD00RzWPZCa+bLnHCf3oJwuFZIRsHT5p236QXww==",
       "type": "package",
@@ -1032,22 +1066,24 @@
         "sqlitepclraw.provider.e_sqlite3.nuspec"
       ]
     },
-    "System.Memory/4.5.3": {
-      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+    "System.Memory/4.5.5": {
+      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "type": "package",
-      "path": "system.memory/4.5.3",
+      "path": "system.memory/4.5.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.1/System.Memory.dll",
         "lib/netstandard1.1/System.Memory.xml",
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.4.5.5.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1169,41 +1205,40 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Entidades >= 1.0.0",
+      "Spectre.Console >= 0.47.0",
       "Sqlite >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jorge\\.nuget\\packages\\": {}
+    "C:\\Users\\Albert\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Programa\\Programa.csproj",
+      "projectUniqueName": "C:\\Users\\Albert\\Desktop\\Progra_avanzada\\PA17F_Project\\Solution\\V1\\Programa\\Programa.csproj",
       "projectName": "Programa",
-      "projectPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Programa\\Programa.csproj",
-      "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Programa\\obj\\",
+      "projectPath": "C:\\Users\\Albert\\Desktop\\Progra_avanzada\\PA17F_Project\\Solution\\V1\\Programa\\Programa.csproj",
+      "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Albert\\Desktop\\Progra_avanzada\\PA17F_Project\\Solution\\V1\\Programa\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj"
+            "C:\\Users\\Albert\\Desktop\\Progra_avanzada\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\Albert\\Desktop\\Progra_avanzada\\PA17F_Project\\Solution\\V1\\Entidades\\Entidades.csproj"
             },
-            "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj": {
-              "projectPath": "C:\\Users\\Jorge\\Desktop\\repo progra\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj"
+            "C:\\Users\\Albert\\Desktop\\Progra_avanzada\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj": {
+              "projectPath": "C:\\Users\\Albert\\Desktop\\Progra_avanzada\\PA17F_Project\\Solution\\V1\\Sqlite\\Sqlite.csproj"
             }
           }
         }
@@ -1217,6 +1252,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "Spectre.Console": {
+            "target": "Package",
+            "version": "[0.47.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
