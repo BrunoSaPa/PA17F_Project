@@ -1,0 +1,15 @@
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/Backend.csproj.AssemblyReference.cache
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/Backend.GeneratedMSBuildEditorConfig.editorconfig
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/Backend.AssemblyInfoInputs.cache
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/Backend.AssemblyInfo.cs
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/Backend.csproj.CoreCompileInputs.cache
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/bin/Debug/net7.0/Backend.deps.json
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/bin/Debug/net7.0/Backend.dll
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/bin/Debug/net7.0/Backend.pdb
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/bin/Debug/net7.0/Entidades.dll
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/bin/Debug/net7.0/Entidades.pdb
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/Backend.csproj.CopyComplete
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/Backend.dll
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/refint/Backend.dll
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/Backend.pdb
+/home/lino/Codigos/Skull/PrograA1/P3/Proyecto/Backend/obj/Debug/net7.0/ref/Backend.dll
