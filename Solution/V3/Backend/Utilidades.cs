@@ -1,5 +1,6 @@
 ﻿namespace Backend;
 
+using System.Text.RegularExpressions;
 using System;
 using System.Text;
 using System.Security.Cryptography;
@@ -68,4 +69,23 @@ public static class Utilidades
 	}
 #endregion
 
+#region Registro/Nómina
+
+public static bool VerificarRegistroNomina(string Registro){
+        Regex regex = new Regex("^[0-9]{8}$");
+        return regex.IsMatch(Registro);
 }
+
+#endregion
+
+#region Nombre
+
+public static bool VerificarNombre(string Nombre){
+		RegexOptions options = RegexOptions.IgnoreCase;
+        Regex regex = new Regex(@"^[\ áéíóúñ'a-z]+$", options);
+        return regex.IsMatch(Nombre);
+}
+#endregion
+
+}
+

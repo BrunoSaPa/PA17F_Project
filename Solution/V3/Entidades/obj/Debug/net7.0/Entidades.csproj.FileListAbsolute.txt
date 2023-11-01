@@ -26,3 +26,17 @@ C:\Users\Albert\Downloads\proj_v3\Proyecto\Entidades\obj\Debug\net7.0\refint\Ent
 C:\Users\Albert\Downloads\proj_v3\Proyecto\Entidades\obj\Debug\net7.0\Entidades.pdb
 C:\Users\Albert\Downloads\proj_v3\Proyecto\Entidades\obj\Debug\net7.0\Entidades.genruntimeconfig.cache
 C:\Users\Albert\Downloads\proj_v3\Proyecto\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\bin\Debug\net7.0\Entidades.deps.json
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\bin\Debug\net7.0\Entidades.runtimeconfig.json
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\bin\Debug\net7.0\Entidades.dll
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\bin\Debug\net7.0\Entidades.pdb
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfo.cs
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\Entidades.dll
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\refint\Entidades.dll
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\Entidades.pdb
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\Entidades.genruntimeconfig.cache
+C:\Users\BRUNO\Documents\PA17F_Project\Solution\V3\Entidades\obj\Debug\net7.0\ref\Entidades.dll

@@ -140,20 +140,48 @@ public class MantenimientoProfesores : PaginaBase
 	    // Solicitar los datos del usuario
 	    Console.Write("Ingresa el nombre del usuario: ");
 	    string nombre = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(nombre)){
+            Console.Clear();
+            Console.WriteLine("Nombre no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nombre del usuario: ");
+            nombre = Console.ReadLine();
+		};
 	
 	    Console.Write("Ingresa el apellido paterno del usuario: ");
 	    string aplPaterno = Console.ReadLine();
 	
+		while(!Utilidades.VerificarNombre(aplPaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido paterno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el apellido paterno del usuario: ");
+            aplPaterno = Console.ReadLine();
+		};
+
 	    Console.Write("Ingresa el apellido materno del usuario: ");
 	    string aplMaterno = Console.ReadLine();
-    
-        Console.Write("Ingresa la nomina: ");
+
+		while(!Utilidades.VerificarNombre(aplMaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido materno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el apellido materno del usuario: ");
+            aplMaterno = Console.ReadLine();
+		};
+
+	    Console.Write("Ingresa la nomina: ");
         string nomina = Console.ReadLine();
-    
-        Console.Write("Ingresa la contraseña del usuario: ");
-        string contrasena = Console.ReadLine();
-        string contrasenaEncriptada = Utilidades.EncriptarContrasenaSHA256(contrasena);
-    
+	
+		while(!Utilidades.VerificarRegistroNomina(nomina)){
+            Console.Clear();
+            Console.WriteLine("Nómina no válida, inténtalo de nuevo");
+            Console.Write("\nIngresa la nomina: ");
+            nomina = Console.ReadLine();
+		};
+
+	    Console.Write("Ingresa la contraseña del usuario: ");
+	    string contrasena = Console.ReadLine();
+	    string contrasenaEncriptada = Utilidades.EncriptarContrasenaSHA256(contrasena);
+	
         try
         {
             UsuarioActual = new Usuario
@@ -213,12 +241,26 @@ public class MantenimientoProfesores : PaginaBase
     {
         Mostrar();
     
-        Console.Write("Ingresa el nuevo nombre del usuario: ");
-        string nuevoNombre = Console.ReadLine();
-    
-        Console.Write("Ingresa la nueva nomina: ");
+    	Console.Write("Ingresa el nuevo nombre del usuario: ");
+	    string nuevoNombre = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(nuevoNombre)){
+            Console.Clear();
+            Console.WriteLine("Apellido materno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nuevo nombre del usuario: ");
+            nuevoNombre = Console.ReadLine();
+		};
+
+	    Console.Write("Ingresa la nueva nomina: ");
         string nuevaNomina = Console.ReadLine();
-    
+	
+		while(!Utilidades.VerificarRegistroNomina(nuevaNomina)){
+            Console.Clear();
+            Console.WriteLine("Nómina no válida, inténtalo de nuevo");
+            Console.Write("\nIngresa la nueva nomina: ");
+            nuevaNomina = Console.ReadLine();
+		};
+
         try
         {
             if (ProfesorActual.IdUsuarioNavigation != null)

@@ -128,24 +128,53 @@ public class MantenimientoEstudiantes : PaginaBase
         Console.Clear();
         Console.WriteLine("Agregando un nuevo Estudiante");
         
-        // Solicitar los datos
-        Console.Write("Ingresa el nombre del usuario: ");
-        string nuevoNombre = Console.ReadLine();
-        
-        Console.Write("Ingresa el apellido paterno del usuario: ");
-        string nuevoAplPaterno = Console.ReadLine();
-        
-        Console.Write("Ingresa el apellido materno del usuario: ");
-        string nuevoAplMaterno = Console.ReadLine();
-        
-        Console.Write("Ingresa el registro del estudiante: ");
-        long nuevoRegistro = long.Parse(Console.ReadLine());
-        
-        Console.Write("Ingresa la contraseña del usuario: ");
-        string nuevaContrasena = Console.ReadLine();
-        
-        string contrasenaEncriptada = Utilidades.EncriptarContrasenaSHA256(nuevaContrasena);
-        
+        // Solicitar los datos      
+	    Console.Write("Ingresa el nombre del usuario: ");
+	    string nuevoNombre = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(nuevoNombre)){
+            Console.Clear();
+            Console.WriteLine("Nombre no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nombre del usuario: ");
+            nuevoNombre = Console.ReadLine();
+		};
+	
+	    Console.Write("Ingresa el apellido paterno del usuario: ");
+	    string nuevoAplPaterno = Console.ReadLine();
+	
+		while(!Utilidades.VerificarNombre(nuevoAplPaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido paterno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el apellido paterno del usuario: ");
+            nuevoAplPaterno = Console.ReadLine();
+		};
+
+	    Console.Write("Ingresa el apellido materno del usuario: ");
+	    string nuevoAplMaterno = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(nuevoAplMaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido materno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el apellido materno del usuario: ");
+            nuevoAplMaterno = Console.ReadLine();
+		};
+
+	    Console.Write("Ingresa el registro del estudiante: ");
+        string nuevoRegistro = Console.ReadLine();
+	
+		while(!Utilidades.VerificarRegistroNomina(nuevoRegistro)){
+            Console.Clear();
+            Console.WriteLine("Registro no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el registro del estudiante: ");
+            nuevoRegistro = Console.ReadLine();
+		};
+
+	    Console.Write("Ingresa la contraseña del usuario: ");
+	    string contrasena = Console.ReadLine();
+	    string contrasenaEncriptada = Utilidades.EncriptarContrasenaSHA256(contrasena);
+	
+
+
         try
         {
             // Crear una nueva instancia de Usuario
@@ -168,7 +197,7 @@ public class MantenimientoEstudiantes : PaginaBase
 	            EstudianteActual = new Estudiante
 	            {
 	                IdUsuario = UsuarioActual.Id,
-	                Registro = nuevoRegistro,
+	                Registro = long.Parse(nuevoRegistro),
 	                IdGrupo = 1, //Prueba
 	                FchCreacion = DateTime.Now
 	            };
@@ -209,22 +238,52 @@ public class MantenimientoEstudiantes : PaginaBase
         Mostrar(); // Muestra los datos actuales
         
         // Solicitar los nuevos valores del estudiante
-        Console.Write("Ingresa el nuevo registro del estudiante: ");
-        long nuevoRegistro = long.Parse(Console.ReadLine());
-        
-        Console.Write("Ingresa el nuevo nombre del usuario: ");
-        string nuevoNombre = Console.ReadLine();
-        
-        Console.Write("Ingresa el nuevo apellido paterno del usuario: ");
-        string nuevoAplPaterno = Console.ReadLine();
-        
-        Console.Write("Ingresa el nuevo apellido materno del usuario: ");
-        string nuevoAplMaterno = Console.ReadLine();
-        
+
+	    Console.Write("Ingresa el nuevo registro del estudiante: ");
+        string nuevoRegistro = Console.ReadLine();
+	
+		while(!Utilidades.VerificarRegistroNomina(nuevoRegistro)){
+            Console.Clear();
+            Console.WriteLine("Registro no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nuevo registro del estudiante: ");
+            nuevoRegistro = Console.ReadLine();
+		}; 
+
+       	Console.Write("Ingresa el nuevo nombre del usuario: ");
+	    string nuevoNombre = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(nuevoNombre)){
+            Console.Clear();
+            Console.WriteLine("Nombre no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nuevo nombre del usuario: ");
+            nuevoNombre = Console.ReadLine();
+		};
+	
+	    Console.Write("Ingresa el nuevo apellido paterno del usuario: ");
+	    string nuevoAplPaterno = Console.ReadLine();
+	
+		while(!Utilidades.VerificarNombre(nuevoAplPaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido paterno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nuevo apellido paterno del usuario: ");
+            nuevoAplPaterno = Console.ReadLine();
+		};
+
+	    Console.Write("Ingresa el nuevo apellido materno del usuario: ");
+	    string nuevoAplMaterno = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(nuevoAplMaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido materno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa nuevo el apellido materno del usuario: ");
+            nuevoAplMaterno = Console.ReadLine();
+		};
+
+
         try
         {
             // Actualizar el estudiante
-            EstudianteActual.Registro = nuevoRegistro;
+            EstudianteActual.Registro = long.Parse(nuevoRegistro);
             UsuarioActual.Nombre = nuevoNombre;
             UsuarioActual.AplPaterno = nuevoAplPaterno;
             UsuarioActual.AplMaterno = nuevoAplMaterno;

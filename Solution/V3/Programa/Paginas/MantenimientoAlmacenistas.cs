@@ -162,11 +162,32 @@ public class MantenimientoAlmacenistas : PaginaBase
 	    Console.Write("Ingresa el nuevo nombre del usuario: ");
 	    string nuevoNombre = Console.ReadLine();
 	
+		while(!Utilidades.VerificarNombre(nuevoNombre)){
+            Console.Clear();
+            Console.WriteLine("Nombre no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nuevo nombre del usuario: ");
+            nuevoNombre = Console.ReadLine();
+		};
+
 	    Console.Write("Ingresa el nuevo apellido paterno del usuario: ");
 	    string nuevoAplPaterno = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(nuevoAplPaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido paterno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nuevo apellido paterno del usuario: ");
+            nuevoAplPaterno = Console.ReadLine();
+		};
 	
 	    Console.Write("Ingresa el nuevo apellido materno del usuario: ");
 	    string nuevoAplMaterno = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(nuevoAplMaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido materno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nuevo apellido materno del usuario: ");
+            nuevoAplMaterno = Console.ReadLine();
+		};
 
 	    try
 	    {
@@ -211,16 +232,44 @@ public class MantenimientoAlmacenistas : PaginaBase
 	    // Solicitar los datos del usuario
 	    Console.Write("Ingresa el nombre del usuario: ");
 	    string nombre = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(nombre)){
+            Console.Clear();
+            Console.WriteLine("Nombre no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el nombre del usuario: ");
+            nombre = Console.ReadLine();
+		};
 	
 	    Console.Write("Ingresa el apellido paterno del usuario: ");
 	    string aplPaterno = Console.ReadLine();
 	
+		while(!Utilidades.VerificarNombre(aplPaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido paterno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el apellido paterno del usuario: ");
+            aplPaterno = Console.ReadLine();
+		};
+
 	    Console.Write("Ingresa el apellido materno del usuario: ");
 	    string aplMaterno = Console.ReadLine();
+
+		while(!Utilidades.VerificarNombre(aplMaterno)){
+            Console.Clear();
+            Console.WriteLine("Apellido materno no válido, inténtalo de nuevo");
+            Console.Write("\nIngresa el apellido materno del usuario: ");
+            aplMaterno = Console.ReadLine();
+		};
 
 	    Console.Write("Ingresa la nomina: ");
         string nomina = Console.ReadLine();
 	
+		while(!Utilidades.VerificarRegistroNomina(nomina)){
+            Console.Clear();
+            Console.WriteLine("Nómina no válida, inténtalo de nuevo");
+            Console.Write("\nIngresa la nomina: ");
+            nomina = Console.ReadLine();
+		};
+
 	    Console.Write("Ingresa la contraseña del usuario: ");
 	    string contrasena = Console.ReadLine();
 	    string contrasenaEncriptada = Utilidades.EncriptarContrasenaSHA256(contrasena);

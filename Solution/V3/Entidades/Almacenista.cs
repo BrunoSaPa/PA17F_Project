@@ -31,4 +31,6 @@ public partial class Almacenista
     [ForeignKey("IdUsuario")]
     [InverseProperty("Almacenista")]
     public virtual Usuario? IdUsuarioNavigation { get; set; }
+    
+
 }

@@ -1503,19 +1503,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Albert\\.nuget\\packages\\": {}
+    "C:\\Users\\BRUNO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Albert\\Downloads\\proj_v3\\Proyecto\\Programa\\Programa.csproj",
+      "projectUniqueName": "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Programa\\Programa.csproj",
       "projectName": "Programa",
-      "projectPath": "C:\\Users\\Albert\\Downloads\\proj_v3\\Proyecto\\Programa\\Programa.csproj",
-      "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Albert\\Downloads\\proj_v3\\Proyecto\\Programa\\obj\\",
+      "projectPath": "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Programa\\Programa.csproj",
+      "packagesPath": "C:\\Users\\BRUNO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Programa\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\BRUNO\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -1527,11 +1527,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Albert\\Downloads\\proj_v3\\Proyecto\\Backend\\Backend.csproj": {
-              "projectPath": "C:\\Users\\Albert\\Downloads\\proj_v3\\Proyecto\\Backend\\Backend.csproj"
+            "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Backend\\Backend.csproj": {
+              "projectPath": "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Backend\\Backend.csproj"
             },
-            "C:\\Users\\Albert\\Downloads\\proj_v3\\Proyecto\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\Albert\\Downloads\\proj_v3\\Proyecto\\Entidades\\Entidades.csproj"
+            "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj"
             }
           }
         }

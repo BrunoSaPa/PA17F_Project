@@ -88,7 +88,6 @@ public class Inicio : PaginaBase
     public string PedirRegistro()
     {
     	string registro = string.Empty;
-        Regex regex = new Regex("^[0-9]{8}");
     
         Console.Clear();
         Console.WriteLine("Bienvenido al sistema de administración del CETI");
@@ -96,7 +95,7 @@ public class Inicio : PaginaBase
         Console.Write("\nRegistro/Nómina: ");
         registro = Console.ReadLine();
     
-        while (!regex.IsMatch(registro))
+        while (!Utilidades.VerificarRegistroNomina(registro))
         {
             Console.Clear();
             Console.WriteLine("Registro/Nómina no válidos, inténtalo de nuevo");

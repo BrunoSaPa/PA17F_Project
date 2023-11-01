@@ -35,15 +35,14 @@ public class Login : PaginaBase
     {
     	string registro = string.Empty;
         string contrasena = string.Empty;
-        Regex regex = new Regex("^[0-9]{8}");
     
         Console.Clear();
         Console.WriteLine("Bienvenido al sistema de administración del CETI");
         Console.WriteLine("Por favor ingresa tus datos a continuación");
         Console.Write("\nRegistro/Nómina: ");
         registro = Console.ReadLine();
-    
-        while (!regex.IsMatch(registro))
+		
+        while (!Utilidades.VerificarRegistroNomina(registro))
         {
             Console.Clear();
             Console.WriteLine("Registro/Nómina no válidos, inténtalo de nuevo");
