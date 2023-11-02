@@ -49,8 +49,6 @@ public partial class ContextoBD : DbContext
 
     public virtual DbSet<PrmPrestamo> PrmPrestamos { get; set; }
     
-public virtual DbSet<PrmPrestamo> PrmPrestamos { get; set; } 
-
     public virtual DbSet<Profesor> Profesores { get; set; }
 
     public virtual DbSet<Salon> Salones { get; set; }
@@ -62,6 +60,8 @@ public virtual DbSet<PrmPrestamo> PrmPrestamos { get; set; }
     public virtual DbSet<TpoUsuario> TpsUsuarios { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
+    
+    public virtual DbSet<EstPrmPrestamo> EstPrmPrestamos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

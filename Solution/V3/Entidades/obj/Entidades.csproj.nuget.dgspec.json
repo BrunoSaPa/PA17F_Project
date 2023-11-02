@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj": {}
+    "C:\\Users\\Albert\\OneDrive\\Documents\\proy\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\Albert\\OneDrive\\Documents\\proy\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\Albert\\OneDrive\\Documents\\proy\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\BRUNO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BRUNO\\Documents\\PA17F_Project\\Solution\\V3\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\Albert\\OneDrive\\Documents\\proy\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Albert\\OneDrive\\Documents\\proy\\PA17F_Project\\Solution\\V3\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\BRUNO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"

@@ -159,15 +159,20 @@ CREATE TABLE IF NOT EXISTS materias (
 -- Table: prm_prestamos
 DROP TABLE IF EXISTS prm_prestamos;
 
-CREATE TABLE IF NOT EXISTS prm_prestamos (
-    id                  INTEGER  PRIMARY KEY AUTOINCREMENT,
-    id_tpo_prm_prestamo INTEGER,
-    id_usuario          INTEGER,
-    fch_inicio          DATETIME DEFAULT (datetime('now') ),
-    fch_fin             DATETIME,
-    fch_creacion        DATETIME DEFAULT (datetime('now') ),
-    fch_modificacion    DATETIME,
-    fch_eliminacion     DATETIME,
+CREATE TABLE prm_prestamos (
+    id                   INTEGER  PRIMARY KEY AUTOINCREMENT,
+    id_tpo_prm_prestamo  INTEGER,
+    id_usuario           INTEGER,
+    fch_inicio           DATETIME DEFAULT (datetime('now') ),
+    fch_fin              DATETIME,
+    fch_creacion         DATETIME DEFAULT (datetime('now') ),
+    fch_modificacion     DATETIME,
+    fch_eliminacion      DATETIME,
+    id_est_prm_prestamos INTEGER,
+    FOREIGN KEY (
+        id_est_prm_prestamos
+    )
+    REFERENCES est_prm_prestamos (id)
     FOREIGN KEY (
         id_tpo_prm_prestamo
     )
@@ -177,6 +182,16 @@ CREATE TABLE IF NOT EXISTS prm_prestamos (
     )
     REFERENCES usuarios (id) 
 );
+
+DROP TABLE IF EXISTS est_prm_prestamos;
+
+CREATE TABLE est_prm_prestamos (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    descripcion TEXT
+);
+INSERT INTO est_prm_prestamos (descripcion) VALUES ('Aprobado');
+INSERT INTO est_prm_prestamos (descripcion) VALUES ('Por aprobar');
+INSERT INTO est_prm_prestamos (descripcion) VALUES ('Rechazado');
 
 
 -- Table: profesores

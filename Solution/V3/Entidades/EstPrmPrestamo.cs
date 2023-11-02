@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Entidades;
 
 [Table("est_prm_prestamos")]
-public partial class EstPrmPrestamos
+public partial class EstPrmPrestamo
 {
     [Key]
     [Column("id")]

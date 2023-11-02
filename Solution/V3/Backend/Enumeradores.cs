@@ -22,5 +22,9 @@ public static class Enumeradores
 		Correctivo,
 		Predictivo
 	}
-	
-}
+	public enum est_prm_prestamos
+	{
+		Aprobado,
+		Por_aprobar,
+		Rechazado
+	}
