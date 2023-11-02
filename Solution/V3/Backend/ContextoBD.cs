@@ -48,6 +48,8 @@ public partial class ContextoBD : DbContext
     public virtual DbSet<Materia> Materias { get; set; }
 
     public virtual DbSet<PrmPrestamo> PrmPrestamos { get; set; }
+    
+public virtual DbSet<PrmPrestamo> PrmPrestamos { get; set; } 
 
     public virtual DbSet<Profesor> Profesores { get; set; }
 

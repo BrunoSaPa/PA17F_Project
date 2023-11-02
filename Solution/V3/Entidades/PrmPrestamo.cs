@@ -44,4 +44,8 @@ public partial class PrmPrestamo
 
     [InverseProperty("IdPrmPrestamoNavigation")]
     public virtual ICollection<RlcPrsEquipo> RlcPrsEquipos { get; set; } = new List<RlcPrsEquipo>();
+
+    [ForeignKey("IdEstPrmPrestamos")]
+    [InverseProperty("PrmPrestamos")]
+    public virtual EstPrmPrestamo IdEstPrmPrestamosNavigation { get; set; } = null!;
 }
