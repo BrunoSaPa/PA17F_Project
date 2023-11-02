@@ -86,6 +86,39 @@ public static bool VerificarNombre(string Nombre){
         return regex.IsMatch(Nombre);
 }
 #endregion
+public static bool VerificarTipoDePrestamo(string tipo_prestamo){
+if(tipo_prestamo=="1"||tipo_prestamo=="2"){
+	return true;
+}
+else {
+	return false;
+}
 
+}
+public static bool Verificarfecha(string tipo_prestamo){
+ string formatoFechaHora = @"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$";
+
+    // Verificar si la cadena cumple con el patrón de fecha y hora
+    if (Regex.IsMatch(tipo_prestamo, formatoFechaHora))
+    {
+        // Intentar convertir la cadena a DateTime para asegurarse de que es una fecha y hora válida
+        if (DateTime.TryParseExact(tipo_prestamo, "yyyy-MM-dd HH:mm:ss", null, System.Globalization.DateTimeStyles.None, out _))
+        {
+            return true; // La cadena tiene el formato y es una fecha y hora válida
+        }
+    }
+
+    return false;
+
+}
+public static bool VerificarEstadoDePrestamo(string estado_prestamo){
+if(estado_prestamo=="1"||estado_prestamo=="2"||estado_prestamo=="3"){
+	return true;
+}
+else {
+	return false;
+}
+
+}
 }
 

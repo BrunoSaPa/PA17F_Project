@@ -22,9 +22,15 @@ public static class Enumeradores
 		Correctivo,
 		Predictivo
 	}
+	public enum tpo_prm_prestamo
+	{
+		Generado_por_un_estudiante= 1,
+		Generado_por_un_profesor
+	}
 	public enum est_prm_prestamos
 	{
-		Aprobado,
+		Aprobado = 1,
 		Por_aprobar,
 		Rechazado
 	}
+}

@@ -371,6 +371,143 @@ public partial class SQLite : ContextoBD
 	}
 	
 #endregion
+#region Prestamos
+
+public bool InsertarPrestamo(PrmPrestamo _PrmPrestamo)
+	{
+ 		bool resultado = false;
+	    Excepcion = string.Empty;
+	
+	    try
+	    {
+	    	_PrmPrestamo.FchCreacion = DateTime.Now;
+			_PrmPrestamo.FchInicio = DateTime.Now;
+	        PrmPrestamos.Add(_PrmPrestamo);
+	        SaveChanges();
+	        resultado = true;
+	    }
+	    catch (Exception e)
+	    {
+            Excepcion = e.ToString();
+	        Console.WriteLine("Error al guardar cambios en la base de datos: " + e.Message);
+	        Console.WriteLine("Stack trace: " + e.StackTrace);
+	        Console.WriteLine("Excepción datos: " + e.Data);
+	        if (e.InnerException != null)
+	        {
+	            Console.WriteLine("Excepción interna: " + e.InnerException.Message);
+	            Console.WriteLine("Excepción interna stack trace: " + e.InnerException.StackTrace);
+	        }
+	    }
+	
+	    return resultado;
+
+	}
+
+	public PrmPrestamo ObtenerPrestamoPorId(long id)
+	{
+	    PrmPrestamo resultado = null;
+	    Excepcion = string.Empty;
+	
+	    try
+	    {
+	        resultado = PrmPrestamos.FirstOrDefault(a => a.Id == id);
+	    }
+	    catch (Exception e)
+	    {
+	        Excepcion = e.ToString();
+	    }
+	
+	    return resultado;
+	}
+	public PrmPrestamo ObtenerPrestamoPorEstadoDePrestamo(int id)
+	{
+	    PrmPrestamo resultado = null;
+	    Excepcion = string.Empty;
+	
+	    try
+	    {
+	        resultado = PrmPrestamos.FirstOrDefault(a => a.Id == id);
+	    }
+	    catch (Exception e)
+	    {
+	        Excepcion = e.ToString();
+	    }
+	
+	    return resultado;
+	}
+	
+	public bool ActualizarPrestamo(PrmPrestamo _PrmPrestamo)
+	{
+	    bool resultado = false;
+	    Excepcion = string.Empty;
+	
+	    try
+	    {
+	    	_PrmPrestamo.FchModificacion = DateTime.Now;
+	        PrmPrestamos.Update(_PrmPrestamo);
+	        SaveChanges();
+	        resultado = true;
+	    }
+	    catch (Exception e)
+	    {
+	        Excepcion = e.ToString();
+	    }
+	
+	    return resultado;
+	}
+	
+	public bool EliminarPrestamo(PrmPrestamo _PrmPrestamo)
+	{
+	    bool resultado = false;
+	    Excepcion = string.Empty;
+	
+	    try
+	    {
+	        PrmPrestamos.Remove(_PrmPrestamo);
+	        SaveChanges();
+	        resultado = true;
+	    }
+	    catch (Exception e)
+	    {
+	        Excepcion = e.ToString();
+	    }
+	
+	    return resultado;
+	}
+
+	public List<PrmPrestamo> ObtenerTodosLosPrestamos()
+	{
+	    List<PrmPrestamo> resultado = new List<PrmPrestamo>();
+	    Excepcion = string.Empty;
+	
+	    try
+	    {
+	        resultado = PrmPrestamos.ToList();
+	    }
+	    catch (Exception e)
+	    {
+	        Excepcion = e.ToString();
+	        resultado = new List<PrmPrestamo>();
+	    }
+	
+	    return resultado;
+	}
+
+	public PrmPrestamo ObtenerPrestamoPorIdUsuario(long idUsuario)
+	{
+	    PrmPrestamo _PrmPrestamo = null;
+	    try
+	    {
+	        _PrmPrestamo = PrmPrestamos.FirstOrDefault(a => a.IdUsuario == idUsuario);
+	    }
+	    catch (Exception e)
+	    {
+	        // TODO: Manejar la excepcion
+	    }
+	    return _PrmPrestamo;
+	}
+	
+#endregion
 
 #region Almacenistas
 
@@ -604,7 +741,7 @@ public partial class SQLite : ContextoBD
 	
 #endregion
 
-#region Coordinadores
+#region  Coordinadores
 
 	public bool InsertarCoordinador(Coordinador coordinador)
 	{

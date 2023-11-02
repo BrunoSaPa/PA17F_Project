@@ -34,6 +34,10 @@ public partial class PrmPrestamo
     [Column("fch_eliminacion", TypeName = "DATETIME")]
     public DateTime? FchEliminacion { get; set; }
 
+    [Column("id_est_prm_prestamos")]
+    public long? IdEstPrmPrestamo { get; set; }
+
+
     [ForeignKey("IdTpoPrmPrestamo")]
     [InverseProperty("PrmPrestamos")]
     public virtual TpoPrmPrestamo? IdTpoPrmPrestamoNavigation { get; set; }
