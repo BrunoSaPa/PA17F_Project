@@ -1265,24 +1265,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Albert\\.nuget\\packages\\": {}
+    "C:\\Users\\brand\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Albert\\OneDrive\\Documents\\proy\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\brand\\Desktop\\Bruno\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\Albert\\OneDrive\\Documents\\proy\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
-      "packagesPath": "C:\\Users\\Albert\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Albert\\OneDrive\\Documents\\proy\\PA17F_Project\\Solution\\V3\\Entidades\\obj\\",
+      "projectPath": "C:\\Users\\brand\\Desktop\\Bruno\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
+      "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\brand\\Desktop\\Bruno\\PA17F_Project\\Solution\\V3\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Albert\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
