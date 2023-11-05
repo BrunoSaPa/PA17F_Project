@@ -100,6 +100,8 @@ public class Login : PaginaBase
 	// Pasar a la siguiente pagina
 	public void MostrarPantallaDefault()
 	{
+
+		
 	    Default PaginaDefault = new Default(base.configuracion);
 	    PaginaDefault.IdUsuarioActual = IdUsuarioActual;
 	    PaginaDefault.IdTpoUsuarioActual = IdTpoUsuarioActual;

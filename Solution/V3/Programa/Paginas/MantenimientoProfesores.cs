@@ -25,18 +25,27 @@ public class MantenimientoProfesores : PaginaBase
 
     public void MostrarMantenimientoProfesores()
     {
+    
+        Console.WriteLine("Pagina de profesores");
+        	UsuarioNuevo = IdUsuarioActual == -1;
+    	if(!UsuarioNuevo)
+    	{
+    		Consultar();
+			base.IdTpoUsuarioActual = (int)UsuarioActual.IdTpoUsuario; //Cambiar esto.
+    	}
+		
     	if(!base.TieneAccesoAInterfazActual)
     	{
     		return;
     	}
-        UsuarioNuevo = IdUsuarioActual == -1;
+       
         if (UsuarioNuevo)
         {
             Agregar();
         }
         else
         {
-            Consultar();
+           // Consultar();
             if (ProfesorActual == null)
             {
                 return;
@@ -51,6 +60,8 @@ public class MantenimientoProfesores : PaginaBase
                 Actualizar();
             }
         }
+Console.ReadKey();
+     
     }
 
     public void RecuperarContrasena()

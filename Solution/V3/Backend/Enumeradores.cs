@@ -4,11 +4,15 @@ public static class Enumeradores
 {
 	public enum tps_usuarios
 	{
-		Almacenista = 1,
+		Default,
 		Estudiante,
 		Profesor,
+		Almacenista,
+		
+		
 		Coordinador
 	}
+
 
 	public enum est_usuarios
 	{

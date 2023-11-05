@@ -31,22 +31,32 @@ public class MantenimientoEstudiantes : PaginaBase
 
     public void MostrarMantenimientoEstudiantes()
     {
+    	
+        Console.WriteLine("Pagina de estudiantes");
+        	UsuarioNuevo = IdUsuarioActual == -1;
+    	if(!UsuarioNuevo)
+    	{
+    		Consultar();
+			base.IdTpoUsuarioActual = (int)UsuarioActual.IdTpoUsuario; //Cambiar esto.
+    	}
+		
     	if(!base.TieneAccesoAInterfazActual)
     	{
     		return;
     	}
-        UsuarioNuevo = IdUsuarioActual == -1;
+       
         if (UsuarioNuevo)
         {
             Agregar();
         }
         else
         {
-            Consultar();
+           // Consultar();
             if (EstudianteActual == null)
             {
                 return;
             }
+
             if (_RecuperarContrasena)
             {
                 RecuperarContrasena();
@@ -56,6 +66,8 @@ public class MantenimientoEstudiantes : PaginaBase
                 Actualizar();
             }
         }
+Console.ReadKey();
+     
     }
 
     // Metodo que te permite cambiar la contrasena del estudiante

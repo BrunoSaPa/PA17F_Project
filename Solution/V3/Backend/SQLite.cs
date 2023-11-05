@@ -46,7 +46,7 @@ public partial class SQLite : ContextoBD
 	
 	    try
 	    {
-	        resultado = Interfaces.Where(i => i.IdTpoUsrAcceso <= TpoUsuario).ToList();
+	        resultado = Interfaces.Where(i => i.IdTpoUsrAcceso <= TpoUsuario && i.IdTpoUsrAcceso != 0).ToList();
 	    }
 	    catch (Exception e)
 	    {
