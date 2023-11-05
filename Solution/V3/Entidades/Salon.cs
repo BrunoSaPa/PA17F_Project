@@ -22,4 +22,7 @@ public partial class Salon
     [ForeignKey("IdDivision")]
     [InverseProperty("Salones")]
     public virtual Division? IdDivisionNavigation { get; set; }
+
+    [InverseProperty("IdSalonNavigation")]
+    public virtual ICollection<PrmPrestamo> PrmPrestamos { get; set; } = new List<PrmPrestamo>();
 }

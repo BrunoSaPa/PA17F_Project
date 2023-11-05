@@ -31,9 +31,18 @@ public partial class Equipo
     [Column("fch_eliminacion", TypeName = "DATETIME")]
     public DateTime? FchEliminacion { get; set; }
 
+    [Column("num_inventario")]
+    public long? NumInventario { get; set; }
+
+    [Column("anio_material")]
+    public long? AnioMaterial { get; set; }
+
+    [InverseProperty("IdEquiposNavigation")]
+    public virtual ICollection<EquiposPrm> EquiposPrms { get; set; } = new List<EquiposPrm>();
+
     [InverseProperty("IdEquipoNavigation")]
     public virtual ICollection<Mantenimiento> Mantenimientos { get; set; } = new List<Mantenimiento>();
 
-    [InverseProperty("IdEquipoNavigation")]
+    [InverseProperty("IdPrmEquiposNavigation")]
     public virtual ICollection<RlcPrsEquipo> RlcPrsEquipos { get; set; } = new List<RlcPrsEquipo>();
 }
