@@ -63,8 +63,7 @@ public partial class ContextoBD : DbContext
     
     public virtual DbSet<EstPrmPrestamo> EstPrmPrestamos { get; set; }
 
-    public virtual DbSet<RlcPrsEquipo> RlcPrsEquipos { get; set; }
-
+    
     public virtual DbSet<EquiposPrm> EquiposPrms { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

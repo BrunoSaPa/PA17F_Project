@@ -43,6 +43,4 @@ public partial class Equipo
     [InverseProperty("IdEquipoNavigation")]
     public virtual ICollection<Mantenimiento> Mantenimientos { get; set; } = new List<Mantenimiento>();
 
-    [InverseProperty("IdPrmEquiposNavigation")]
-    public virtual ICollection<RlcPrsEquipo> RlcPrsEquipos { get; set; } = new List<RlcPrsEquipo>();
 }

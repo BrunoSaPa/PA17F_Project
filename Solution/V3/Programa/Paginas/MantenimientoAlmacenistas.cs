@@ -56,7 +56,7 @@ public class MantenimientoAlmacenistas : PaginaBase
 
 			//Verificación de si es coordinador. Cambia las acciones.
 			
-				Console.WriteLine("Eres un almacenista. ni modo");
+				
 					Console.ReadKey();
 
 

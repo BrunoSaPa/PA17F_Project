@@ -59,6 +59,5 @@ public partial class PrmPrestamo
     [InverseProperty("PrmPrestamos")]
     public virtual Usuario? IdUsuarioNavigation { get; set; }
 
-    [InverseProperty("IdPrmPrestamoNavigation")]
-    public virtual ICollection<RlcPrsEquipo> RlcPrsEquipos { get; set; } = new List<RlcPrsEquipo>();
+
 }
