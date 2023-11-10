@@ -42,5 +42,4 @@ public partial class Equipo
 
     [InverseProperty("IdEquipoNavigation")]
     public virtual ICollection<Mantenimiento> Mantenimientos { get; set; } = new List<Mantenimiento>();
-
 }

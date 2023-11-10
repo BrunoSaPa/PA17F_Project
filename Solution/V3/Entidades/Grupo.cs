@@ -26,8 +26,8 @@ public partial class Grupo
     public DateTime? FchEliminacion { get; set; }
 
     [InverseProperty("IdGrupoNavigation")]
-    public virtual ICollection<Ensena> Ensenas { get; set; } = new List<Ensena>();
+    public virtual ICollection<Estudiante> Estudiantes { get; set; } = new List<Estudiante>();
 
     [InverseProperty("IdGrupoNavigation")]
-    public virtual ICollection<Estudiante> Estudiantes { get; set; } = new List<Estudiante>();
+    public virtual ICollection<Profesor> Profesores { get; set; } = new List<Profesor>();
 }

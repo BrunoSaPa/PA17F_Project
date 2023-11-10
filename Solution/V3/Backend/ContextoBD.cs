@@ -1,6 +1,6 @@
-namespace Backend;
+﻿namespace Backend;
 
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.Sqlite;
@@ -18,7 +18,9 @@ public partial class ContextoBD : DbContext
     {
     }
 
-    private readonly string connectionString;
+
+
+      private readonly string connectionString;
         
     public ContextoBD(string connectionString)
     {
@@ -33,43 +35,37 @@ public partial class ContextoBD : DbContext
 
     public virtual DbSet<Equipo> Equipos { get; set; }
 
+    public virtual DbSet<EquiposPrm> EquiposPrms { get; set; }
+
+    public virtual DbSet<EstPrmPrestamo> EstPrmPrestamos { get; set; }
+
     public virtual DbSet<EstUsuario> EstUsuarios { get; set; }
 
     public virtual DbSet<Estudiante> Estudiantes { get; set; }
 
     public virtual DbSet<Grupo> Grupos { get; set; }
 
-    public virtual DbSet<Imparte> Impartes { get; set; }
-
     public virtual DbSet<Interfaz> Interfaces { get; set; }
 
     public virtual DbSet<Mantenimiento> Mantenimientos { get; set; }
 
-    public virtual DbSet<Materia> Materias { get; set; }
-
     public virtual DbSet<PrmPrestamo> PrmPrestamos { get; set; }
-    
+
     public virtual DbSet<Profesor> Profesores { get; set; }
 
     public virtual DbSet<Salon> Salones { get; set; }
 
-    public virtual DbSet<TpoMantenimiento> TpsMantenimientos { get; set; }
+    public virtual DbSet<TpsMantenimiento> TpsMantenimientos { get; set; }
 
-    public virtual DbSet<TpoPrmPrestamo> TpsPrmPrestamos { get; set; }
+    public virtual DbSet<TpsPrmPrestamo> TpsPrmPrestamos { get; set; }
 
-    public virtual DbSet<TpoUsuario> TpsUsuarios { get; set; }
+    public virtual DbSet<TpsUsuario> TpsUsuarios { get; set; }
 
     public virtual DbSet<Usuario> Usuarios { get; set; }
-    
-    public virtual DbSet<EstPrmPrestamo> EstPrmPrestamos { get; set; }
-
-    
-    public virtual DbSet<EquiposPrm> EquiposPrms { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlite(connectionString);
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlite("Filename=../BD/Avanzada.db");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -95,11 +91,20 @@ public partial class ContextoBD : DbContext
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
         });
 
+        modelBuilder.Entity<EquiposPrm>(entity =>
+        {
+            entity.Property(e => e.Id).ValueGeneratedNever();
+
+            entity.HasOne(d => d.IdEquiposNavigation).WithMany(p => p.EquiposPrms).OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(d => d.IdPrmPrestamoNavigation).WithMany(p => p.EquiposPrms).OnDelete(DeleteBehavior.Cascade);
+        });
+
         modelBuilder.Entity<Estudiante>(entity =>
         {
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
-            
-            entity.HasOne(e => e.IdGrupoNavigation).WithMany(p => p.Estudiantes).OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(d => d.IdGrupoNavigation).WithMany(p => p.Estudiantes).OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Grupo>(entity =>
@@ -112,45 +117,39 @@ public partial class ContextoBD : DbContext
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
         });
 
-        modelBuilder.Entity<Materia>(entity =>
-        {
-            entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
-            entity.Property(e => e.FchEliminacion).HasDefaultValueSql("'0000-00-00 00:00:00'");
-            entity.Property(e => e.FchModificacion).HasDefaultValueSql("'0000-00-00 00:00:00'");
-        });
-
         modelBuilder.Entity<PrmPrestamo>(entity =>
         {
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
             entity.Property(e => e.FchInicio).HasDefaultValueSql("datetime('now')");
+
+            entity.HasOne(d => d.IdEstPrmPrestamosNavigation).WithMany(p => p.PrmPrestamos).OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(d => d.IdSalonNavigation).WithMany(p => p.PrmPrestamos).OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Profesor>(entity =>
         {
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
-        });
 
-        modelBuilder.Entity<Interfaz>(entity =>
-        {
-            entity.HasOne(d => d.IdTpoUsrAccesoNavigation).WithMany(p => p.Interfaces).OnDelete(DeleteBehavior.ClientSetNull);
+            entity.HasOne(d => d.IdGrupoNavigation).WithMany(p => p.Profesores).OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<Usuario>(entity =>
         {
             entity.Property(e => e.FchCreacion).HasDefaultValueSql("datetime('now')");
             entity.Property(e => e.Nombre).HasDefaultValueSql("''");
-        
-            entity.HasOne(d => d.IdEstUsuarioNavigation).WithMany(p => p.Usuarios).OnDelete(DeleteBehavior.Restrict);
-        
-            entity.HasOne(d => d.IdTpoUsuarioNavigation).WithMany(p => p.Usuarios).OnDelete(DeleteBehavior.Restrict);
 
-         });
+            entity.HasOne(d => d.IdEstUsuarioNavigation).WithMany(p => p.Usuarios).OnDelete(DeleteBehavior.ClientSetNull);
+
+            entity.HasOne(d => d.IdTpoUsuarioNavigation).WithMany(p => p.Usuarios).OnDelete(DeleteBehavior.ClientSetNull);
+        });
 
         OnModelCreatingPartial(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
+   
 	public int ObtenerIdUsuarioPorRegistro(string registro)
 	{
 	    int resultado = 0;

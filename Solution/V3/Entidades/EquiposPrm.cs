@@ -26,6 +26,4 @@ public partial class EquiposPrm
     [ForeignKey("IdPrmPrestamo")]
     [InverseProperty("EquiposPrms")]
     public virtual PrmPrestamo? IdPrmPrestamoNavigation { get; set; }
-
-   
 }

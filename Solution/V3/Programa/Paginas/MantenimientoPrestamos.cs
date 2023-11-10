@@ -280,7 +280,7 @@ public class MantenimientoPrestamos : PaginaBase
                     FchInicio = DateTime.Now,
                      
 	                IdTpoPrmPrestamo = long.Parse(nuevoNombre),
-                    IdEstPrmPrestamo = 2,
+                    IdEstPrmPrestamos = 2,
 
                     IdUsuario = registronuevo.Id,
            	        FchFin = fechaHora,

@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Entidades;
 
-[Table("tps_usuarios")]
-public partial class TpoUsuario
+[Table("tps_prm_prestamos")]
+public partial class TpsPrmPrestamo
 {
     [Key]
     [Column("id")]
@@ -16,9 +16,6 @@ public partial class TpoUsuario
     [Column("descripcion")]
     public string? Descripcion { get; set; }
 
-    [InverseProperty("IdTpoUsuarioNavigation")]
-    public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
-
-    [InverseProperty("IdTpoUsrAccesoNavigation")]
-    public virtual ICollection<Interfaz> Interfaces { get; set; } = new List<Interfaz>();
+    [InverseProperty("IdTpoPrmPrestamoNavigation")]
+    public virtual ICollection<PrmPrestamo> PrmPrestamos { get; set; } = new List<PrmPrestamo>();
 }

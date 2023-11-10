@@ -35,7 +35,7 @@ public partial class PrmPrestamo
     public DateTime? FchEliminacion { get; set; }
 
     [Column("id_est_prm_prestamos")]
-    public long? IdEstPrmPrestamo { get; set; }
+    public long? IdEstPrmPrestamos { get; set; }
 
     [Column("id_salon")]
     public long? IdSalon { get; set; }
@@ -53,11 +53,9 @@ public partial class PrmPrestamo
 
     [ForeignKey("IdTpoPrmPrestamo")]
     [InverseProperty("PrmPrestamos")]
-    public virtual TpoPrmPrestamo? IdTpoPrmPrestamoNavigation { get; set; }
+    public virtual TpsPrmPrestamo? IdTpoPrmPrestamoNavigation { get; set; }
 
     [ForeignKey("IdUsuario")]
     [InverseProperty("PrmPrestamos")]
     public virtual Usuario? IdUsuarioNavigation { get; set; }
-
-
 }

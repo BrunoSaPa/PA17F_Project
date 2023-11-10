@@ -28,13 +28,14 @@ public partial class Profesor
     [Column("fch_eliminacion", TypeName = "DATETIME")]
     public DateTime? FchEliminacion { get; set; }
 
-    [InverseProperty("IdProfesorNavigation")]
-    public virtual ICollection<Ensena> Ensenas { get; set; } = new List<Ensena>();
+    [Column("id_grupo")]
+    public long? IdGrupo { get; set; }
+
+    [ForeignKey("IdGrupo")]
+    [InverseProperty("Profesores")]
+    public virtual Grupo? IdGrupoNavigation { get; set; }
 
     [ForeignKey("IdUsuario")]
     [InverseProperty("Profesores")]
     public virtual Usuario? IdUsuarioNavigation { get; set; }
-
-    [InverseProperty("IdProfesorNavigation")]
-    public virtual ICollection<Imparte> Impartes { get; set; } = new List<Imparte>();
 }

@@ -56,7 +56,7 @@ public partial class Usuario
 
     [ForeignKey("IdTpoUsuario")]
     [InverseProperty("Usuarios")]
-    public virtual TpoUsuario IdTpoUsuarioNavigation { get; set; } = null!;
+    public virtual TpsUsuario IdTpoUsuarioNavigation { get; set; } = null!;
 
     [InverseProperty("IdUsuarioNavigation")]
     public virtual ICollection<PrmPrestamo> PrmPrestamos { get; set; } = new List<PrmPrestamo>();

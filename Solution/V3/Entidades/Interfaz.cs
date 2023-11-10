@@ -7,20 +7,19 @@ using Microsoft.EntityFrameworkCore;
 namespace Entidades;
 
 [Table("interfaces")]
-[Index("Id", IsUnique = true)]
 public partial class Interfaz
 {
-	[Key]
+    [Key]
     [Column("id")]
     public long Id { get; set; }
 
     [Column("id_tpo_usr_acceso")]
-    public long IdTpoUsrAcceso { get; set; }
+    public long? IdTpoUsrAcceso { get; set; }
 
     [Column("nombre")]
     public string? Nombre { get; set; }
 
     [ForeignKey("IdTpoUsrAcceso")]
     [InverseProperty("Interfaces")]
-    public virtual TpoUsuario IdTpoUsrAccesoNavigation { get; set; } = null!;
+    public virtual TpsUsuario? IdTpoUsrAccesoNavigation { get; set; }
 }

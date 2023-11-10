@@ -14,19 +14,16 @@ public partial class Division
     public long Id { get; set; }
 
     [Column("descripcion")]
-    public string? Descripcion { get; set; }
+    public DateTime? Descripcion { get; set; }
 
-    [Column("fch_creacion", TypeName = "DATETIME")]
+    [Column("fch_creacion")]
     public DateTime? FchCreacion { get; set; }
 
-    [Column("fch_modificacion", TypeName = "DATETIME")]
+    [Column("fch_modificacion")]
     public DateTime? FchModificacion { get; set; }
 
-    [Column("fch_eliminacion", TypeName = "DATETIME")]
+    [Column("fch_eliminacion")]
     public DateTime? FchEliminacion { get; set; }
-
-    [InverseProperty("IdDivisionNavigation")]
-    public virtual ICollection<Materia> Materia { get; set; } = new List<Materia>();
 
     [InverseProperty("IdDivisionNavigation")]
     public virtual ICollection<Salon> Salones { get; set; } = new List<Salon>();

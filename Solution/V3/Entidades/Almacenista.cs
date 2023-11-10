@@ -13,11 +13,11 @@ public partial class Almacenista
     [Column("id")]
     public long Id { get; set; }
 
-    [Column("nomina")]
-    public long? Nomina { get; set; }
-
     [Column("id_usuario")]
     public long? IdUsuario { get; set; }
+
+    [Column("nomina")]
+    public long? Nomina { get; set; }
 
     [Column("fch_creacion", TypeName = "DATETIME")]
     public DateTime? FchCreacion { get; set; }
@@ -31,6 +31,4 @@ public partial class Almacenista
     [ForeignKey("IdUsuario")]
     [InverseProperty("Almacenista")]
     public virtual Usuario? IdUsuarioNavigation { get; set; }
-    
-
 }
