@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\brand\\Desktop\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj": {}
+    "C:\\Users\\aguil\\Desktop\\ProjectFinalAdvance\\PA17F_Project\\Solution\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\brand\\Desktop\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\aguil\\Desktop\\ProjectFinalAdvance\\PA17F_Project\\Solution\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\brand\\Desktop\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\aguil\\Desktop\\ProjectFinalAdvance\\PA17F_Project\\Solution\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\brand\\Desktop\\PA17F_Project\\Solution\\V3\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\brand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\brand\\Desktop\\PA17F_Project\\Solution\\V3\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\aguil\\Desktop\\ProjectFinalAdvance\\PA17F_Project\\Solution\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\aguil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aguil\\Desktop\\ProjectFinalAdvance\\PA17F_Project\\Solution\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\brand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aguil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

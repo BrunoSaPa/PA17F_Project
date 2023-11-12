@@ -38,4 +38,11 @@ public partial class Profesor
     [ForeignKey("IdUsuario")]
     [InverseProperty("Profesores")]
     public virtual Usuario? IdUsuarioNavigation { get; set; }
+
+
+[InverseProperty("IdProfesorNavigation")]
+public virtual ICollection<PrmPrestamo> PrmPrestamos { get; set; } = new List<PrmPrestamo>();
+
+
+
 }

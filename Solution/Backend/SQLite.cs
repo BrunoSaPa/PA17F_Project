@@ -842,6 +842,7 @@ public bool InsertarPrestamo(PrmPrestamo _PrmPrestamo)
 	    Coordinador coordinador = null;
 	    try
 	    {
+
 	        coordinador = Coordinadores.FirstOrDefault(c => c.IdUsuario == idUsuario);
 	    }
 	    catch (Exception e)
@@ -852,5 +853,97 @@ public bool InsertarPrestamo(PrmPrestamo _PrmPrestamo)
 	}
 	
 #endregion
-    
+
+
+#region equipos
+
+	public List<Equipo> ObtenerTodosLosEquipos()
+	{
+	    List<Equipo> resultado = new();
+	    Excepcion = string.Empty;
+	
+	    try
+	    {
+	        resultado = Equipos.ToList();
+	    }
+	    catch (Exception e)
+	    {
+	        Excepcion = e.ToString();
+	        resultado = new List<Equipo>();
+	    }
+	
+	    return resultado;
+	}
+
+
+	public Equipo ObtenerEquipoPorId(long id)
+{
+
+	Equipo equipo = null;
+	Excepcion = string.Empty;
+
+	try{
+
+		equipo = Equipos.FirstOrDefault(e => e.Id == id);
+	}
+	catch(Exception e)
+	{
+		Excepcion = e.ToString();
+
+	} 
+
+	return equipo;
+
+
+}
+
+#endregion
+
+
+#region salones
+
+	public List<Salon> ObtenerTodosLosSalones()
+	{
+	    List<Salon> resultado = new();
+	    Excepcion = string.Empty;
+	
+	    try
+	    {
+	        resultado = Salones.ToList();
+	    }
+	    catch (Exception e)
+	    {
+	        Excepcion = e.ToString();
+	    
+	    }
+	
+	    return resultado;
+	}
+
+
+	public Salon ObtenerSalonPorId(long id)
+{
+
+	Salon salones = null;
+	Excepcion = string.Empty;
+
+	try{
+
+		salones = Salones.FirstOrDefault(e => e.Id == id);
+	}
+
+	catch(Exception e)
+	{
+		Excepcion = e.ToString();
+
+	} 
+
+	return salones;
+
+
+}
+
+
+#endregion
+
 }

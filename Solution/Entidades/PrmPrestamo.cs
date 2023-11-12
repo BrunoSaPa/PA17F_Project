@@ -40,6 +40,10 @@ public partial class PrmPrestamo
     [Column("id_salon")]
     public long? IdSalon { get; set; }
 
+
+      [Column("id_profesor")]
+    public long? IdProfesor { get; set; }
+
     [InverseProperty("IdPrmPrestamoNavigation")]
     public virtual ICollection<EquiposPrm> EquiposPrms { get; set; } = new List<EquiposPrm>();
 
@@ -54,6 +58,11 @@ public partial class PrmPrestamo
     [ForeignKey("IdTpoPrmPrestamo")]
     [InverseProperty("PrmPrestamos")]
     public virtual TpsPrmPrestamo? IdTpoPrmPrestamoNavigation { get; set; }
+
+
+   [ForeignKey("IdProfesor")]
+   [InverseProperty("PrmPrestamos")]
+    public virtual Profesor? IdProfesorNavigation { get; set; }
 
     [ForeignKey("IdUsuario")]
     [InverseProperty("PrmPrestamos")]

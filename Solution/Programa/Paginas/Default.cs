@@ -63,10 +63,6 @@ public class Default : PaginaBase
 		{
 			foreach (var inter in interfaces)  //iterar para mostrar en un menu
 			{
-				if (inter.Nombre!.Equals( "MantenimientoUsuarios")) //MantenimientoUsuarios no se muestra en el menu.
-				{
-					continue;
-				}
 				opciones.Add(inter.Nombre!);
 
 			}
@@ -117,6 +113,15 @@ public class Default : PaginaBase
 				mantenimientoAlmacenistas.MostrarMantenimientoAlmacenistas();
 
 				break;
+
+			case "PrestamosEstudiantes":
+				PrestamosEstudiantes prestamosEstudiante = new(base.configuracion);
+				prestamosEstudiante.IdUsuarioActual = IdUsuarioActual;
+				
+				prestamosEstudiante.MostrarPrestamosEstudiantes();
+
+				break;
+
 			case "Cerrar sesión":
 				Console.WriteLine("Saliendo del sistema... haga clic en una tecla");
 
